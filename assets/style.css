@@ -3,10 +3,12 @@
     margin:0;
     box-sizing: border-box;
 }
+
 html {
     font-size :62.5%;
     
 }
+
 body{
     width:100vw;
     height:100vh;
@@ -17,9 +19,9 @@ body{
     background-color:black;
 }
 
-.div-dad-title {
+/* .div-dad-title {
 
-}
+} */
 
 .title{
     color:#00BFFF;
@@ -90,6 +92,24 @@ body{
     border:2px solid #00BFFF;
     border-radius:10%;
     font-size:1.6rem;
+}
+
+
+@media (max-width:768px){
+    html {
+        font-size :50%;
+    }
+}
+
+@media (max-width:320px){
+    html {
+        font-size :40%;
+    }
+
+    .dad {
+        width:76.6%;
+        height:46.6%;
+    }
 }
 
 
