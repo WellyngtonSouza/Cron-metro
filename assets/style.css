@@ -97,18 +97,23 @@ body{
 
 @media (max-width:768px){
     html {
-        font-size :50%;
+        font-size: 35%;
+    }
+
+    .dad {
+        width:56.6%;
+        height:33.3%;
     }
 }
 
 @media (max-width:320px){
     html {
-        font-size :40%;
+        font-size :25%;
     }
 
     .dad {
         width:76.6%;
-        height:46.6%;
+        height:33.3%;
     }
 }
 
