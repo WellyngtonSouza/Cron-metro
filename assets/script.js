@@ -2,15 +2,15 @@ let minute = document.getElementById("mm");
 let second = document.getElementById("ss");
 let mSecond = document.getElementById("ml");
 
-let iniciar = document.getElementById("iniciar");
+let start = document.getElementById("iniciar");
 let pause = document.getElementById("pause");
-let reiniciar = document.getElementById("reiniciar");
+let restart = document.getElementById("reiniciar");
 
 let mm = 0;
 let ss = 0;
 let ml = 0;
 
-let controle = true;
+let control = true;
 
 let croPause;
 
@@ -22,9 +22,9 @@ function format(content, content2) {
   }
 }
 
-iniciar.addEventListener("click", () => {
-  if (controle) {
-    iniciar.innerHTML = "Iniciar";
+start.addEventListener("click", () => {
+  if (control) {
+    start.innerHTML = "Start";
     croPause = setInterval(function () {
       ml++;
       mSecond.innerHTML = ml;
@@ -48,16 +48,16 @@ iniciar.addEventListener("click", () => {
       format(mm, minute);
     }, 1000 / 100);
   }
-  controle = false;
+  control = false;
 });
 
 pause.addEventListener("click", function () {
   clearInterval(croPause);
-  controle = true;
-  iniciar.innerHTML = "Retomar";
+  control = true;
+  start.innerHTML = "Resume";
 });
 
-reiniciar.addEventListener("click", function () {
+restart.addEventListener("click", function () {
   clearInterval(croPause);
   minute.innerHTML = "00";
   second.innerHTML = "00";
@@ -65,5 +65,5 @@ reiniciar.addEventListener("click", function () {
   mm = 0;
   ss = 0;
   ms = 0;
-  controle = true;
+  control = true;
 });
